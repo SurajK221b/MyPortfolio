@@ -4,7 +4,7 @@
       <a class="navbar-brand" href="https://github.com/SurajK221b" target="_blank">SurajK</a>
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a routerLink="/home" routerLinkActive="text-light" class="nav-link">Home</a>
+          <a routerLink="/home" routerLinkActive="text-light" [routerLinkActiveOptions]="{ exact: true }"  class="nav-link">Home</a>
         </li>
         <li class="nav-item">
           <a routerLink="/about" routerLinkActive="text-light" class="nav-link">About</a>
