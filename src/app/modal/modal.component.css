@@ -1,0 +1,170 @@
+.modal-container {
+  max-width: 800px;
+  width: 100%;
+  outline: none;
+  border: none;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  background-color: #212529; 
+  color: #d4d4d4;
+  padding: 2rem;
+  border-radius: 6px;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #DCDCAA;
+  margin: 0;
+}
+
+.close-button {
+  color: #9CDCFE;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-size: 1.5rem;
+  color: #9CDCFE;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-description {
+  font-weight: bold;
+  text-align: center;
+  color: #DCDCAA;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.p-modal {
+  color: #d4d4d4;
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+  margin: 1rem 0;
+}
+
+.divider {
+  margin: 1.5rem 0;
+  border-color: #3c3c3c;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tag {
+  color: white !important;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  filter: brightness(0.9);
+  --mdc-chip-label-text-color: white;
+}
+
+.tag-text {
+  color: white;
+}
+
+.github {
+  color: #9CDCFE;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.swiper-pagination-bullet-custom {
+  background-color: #8c98a3;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #DCDCAA;
+}
+
+::ng-deep .cdk-global-overlay-wrapper {
+  align-items: flex-start !important;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.mat-mdc-dialog-container {
+  --mdc-dialog-container-color: transparent !important;
+  --mdc-dialog-container-shape: 0 !important;
+  --mdc-dialog-container-elevation: none !important;
+  padding: 0 !important;
+}
+
+.mat-mdc-dialog-surface {
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  border: none !important;
+}
+
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: #3c3c3c #1e1e1e;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #3c3c3c;
+    border-radius: 4px;
+  }
+}
+
+::ng-deep .cdk-global-overlay-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  height: 100vh !important;
+}

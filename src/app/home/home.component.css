@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+  .home-title, .home-author {
+    font-size: 2.5rem !important;
+  }
+
+  .home-author {
+    line-height: 3rem !important;
+  }
+}
+
+
+.text-left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.text-left {
+  margin: 80px;
+  text-align: start;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  color: #569CD6;
+  margin-bottom: 4rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+.home-author {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+
+.author-name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+#dynamic-text {
+  color: #FFD700;
+  border-right: 2px solid #FFD700;
+  padding-right: 6px;
+  animation: blink-caret 0.7s step-end infinite;
+  font-weight: 500;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #FFD700;
+  }
+}
+
+blockquote {
+  color: #D4D4D4;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+

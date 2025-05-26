@@ -1,0 +1,32 @@
+@import '../../styles.css';
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  margin-top: 50px;
+  border: 2px solid #3c3c3c;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-body {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.card-title {
+  color: #DCDCAA;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin: 25px 0;
+  color: #9CDCFE;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}

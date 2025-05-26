@@ -1,0 +1,44 @@
+@import '../../styles.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+.navbar {
+  background-color: #1e1e1e;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #DCDCAA;
+}
+
+.nav-link {
+  color: #9CDCFE;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.bg-dark {
+  background-color: #1e1e1e !important;
+}
+
+.surname {
+  font-size: 20px;
+  font-weight: bold;
+  color: #DCDCAA;
+}
