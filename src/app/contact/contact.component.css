@@ -40,6 +40,8 @@
   font-weight: 600;
   color: #DCDCAA;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .white-highlight {
@@ -59,11 +61,30 @@
   margin: 1rem 0 1.5rem;
   padding: 0 15px;
   max-width: 640px;
+  text-align: center;
 }
 
-/* .media-content {
-  margin: 1.5rem 0;
-} */
+.contact-info {
+  color: #cccccc;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #00FF00;
+}
+
+.contact-info a {
+  color: #9CDCFE;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
 
 .media-icons {
   display: flex;
@@ -141,17 +162,36 @@
   color: #ffffff;
 }
 
+/* ============================
+   Responsive Fixes for Mobile
+   ============================ */
 @media (max-width: 768px) {
+  .default-container {
+    padding: 20px 10px;
+  }
+
+  .contact-card {
+    padding: 40px 20px;
+  }
+
   .contact-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .default-highlight {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .contact-paragraph {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+    text-align: center;
   }
 
   .contact-image {
@@ -167,25 +207,4 @@
   .media-icon i {
     font-size: 1.8rem;
   }
-}
-.contact-info {
- 
-  color: #cccccc;
-  font-family: 'Fira Code', monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.contact-info i {
-  margin-right: 8px;
-  color: #00FF00;
-}
-
-.contact-info a {
-  color: #9CDCFE;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
 }

@@ -194,11 +194,28 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
 }
 
 @media (max-width: 768px) {
-  ::ng-deep mat-expansion-panel-header {
-    padding: 14px 12px !important;
+  mat-expansion-panel-header {
+    min-height: 64px !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
   }
 
-  ::ng-deep mat-panel-title {
-    font-size: 0.9rem !important;
+  mat-panel-title {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
+mat-expansion-panel-header {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  min-height: 56px !important;
+  align-items: center;
+}
+
+mat-panel-title {
+  font-size: 1rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+

@@ -48,10 +48,37 @@
 /* Responsive Menu */
 @media (max-width: 768px) {
   .navbar-nav {
-    text-align: center;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 10px;
+    display: flex !important;
+    gap: 10px;
   }
 
   .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin: 0;
+    flex: 0 0 auto;
   }
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    display: flex !important;
+  }
+
+  .navbar-nav .nav-item {
+    flex: 0 1 auto;
+  }
+}
+.navbar-nav::-webkit-scrollbar {
+  display: none;
+}
+.navbar-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

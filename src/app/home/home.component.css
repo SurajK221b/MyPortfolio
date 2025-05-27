@@ -103,3 +103,31 @@ blockquote {
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .home-content {
+    text-align: left; /* or center if you want it centered */
+  }
+
+  .home-title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+    word-break: break-word; /* prevent overflow */
+  }
+}
+.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  .home-author {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+}
