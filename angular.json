@@ -16,7 +16,6 @@
             "outputPath": "dist/angular-portfolio-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-              "baseHref": "/MyPortfolio/",
             "polyfills": [
               "zone.js"
             ],
@@ -35,6 +34,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/MyPortfolio/",
               "budgets": [
                 {
                   "type": "initial",
