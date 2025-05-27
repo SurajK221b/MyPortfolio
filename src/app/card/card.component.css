@@ -30,3 +30,18 @@
   font-size: 1rem;
   line-height: 1.75rem;
 }
+
+.button-small {
+    background-color: #141a2000;
+    border: 2px solid #00FF00;
+    border-radius: 8px;
+    padding: 10px 5px;
+    width: 145px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+
+        text-decoration: none;
+    color: #9CDCFE;
+    font-weight: 500;
+
+}

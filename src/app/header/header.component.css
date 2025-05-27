@@ -1,26 +1,34 @@
-.navbar {
-  background-color: #2d2d30; /* Changed: Dark Slate Gray for contrast */
-  font-family: 'Fira Code', 'Courier New', monospace;
-  padding: 10px 0;
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  z-index: 1030;
+/* header.component.css */
+
+/* Header Container */
+.header {
+  width: 100%;
+  background-color: #2d2d30;
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
-  width: 100%;
-   background: linear-gradient(to right, #2c3e50, #1e1e1e); /* subtle gradient */
-    border-bottom: 2px solid #888d88;
+  z-index: 1030;
+  padding: 10px 0;
+  border-bottom: 2px solid #888d88;
+  background: linear-gradient(to right, #2c3e50, #1e1e1e);
 }
 
+/* Brand Title */
 .navbar-brand {
-  font-weight: bold;
   color: #e2e24d;
   font-size: 1.3rem;
+  font-weight: bold;
 }
 
+/* Nav Links */
 .nav-link {
   color: #9CDCFE;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .nav-link:hover,
@@ -28,23 +36,7 @@
   color: #ffffff;
 }
 
-.bg-dark {
-  background-color: transparent !important; /* handled by navbar gradient now */
-}
-
-.shadow-sm {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
-}
-
-@media (max-width: 768px) {
-  .navbar-nav {
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin-bottom: 10px;
-  }
-}
+/* Toggler */
 .navbar-toggler {
   border: none;
 }
@@ -53,7 +45,13 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2899, 199, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.navbar-nav .nav-link {
-  padding: 0.5rem 1rem;
-  text-align: center;
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
 }
