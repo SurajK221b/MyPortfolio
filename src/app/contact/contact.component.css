@@ -14,23 +14,32 @@
 .contact-card {
   max-width: 700px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #252526;
   border: 2px solid #3c3c3c;
   padding: 60px 30px;
-  border-radius: 8px;
-  color: #d4d4d4;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 0, 0.08);
+  color: #d4d4d4;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3c3c3c;
 }
 
 .contact-title {
   font-size: 3rem;
+  font-weight: 600;
   color: #DCDCAA;
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
 .white-highlight {
@@ -39,72 +48,22 @@
 
 .default-highlight {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
   color: #569CD6;
-}
-
-.contact-image {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid #3c3c3c;
-  object-fit: cover;
+  font-weight: 600;
 }
 
 .contact-paragraph {
   font-size: 1.2rem;
-  color: #9CDCFE;
   line-height: 1.8;
-  margin: 2rem 0;
-  max-width: 600px;
-  padding: 0 10px;
+  color: #9CDCFE;
+  margin: 1rem 0 1.5rem;
+  padding: 0 15px;
+  max-width: 640px;
 }
 
-.contact-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.contact-button {
-  background-color: transparent;
-  border: 2px solid #00FF00;
-  color: #00FF00;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Fira Code', monospace;
-}
-
-.contact-button:hover {
-  transform: scale(1.05);
-  background-color: #1e1e1e;
-  border-color: #00FF00;
-  color: #ffffff;
-}
-
-.contact-button a {
-  color: #00FF00;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.contact-button:hover a {
-  color: #ffffff;
-}
-
-.media-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
+/* .media-content {
+  margin: 1.5rem 0;
+} */
 
 .media-icons {
   display: flex;
@@ -113,14 +72,18 @@
   flex-wrap: wrap;
 }
 
-.media-icon {
-  font-size: 2rem;
+.media-icon i {
+  font-size: 2.2rem;
+  color: #C586C0;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 .media-icons a {
   color: #C586C0;
-  position: relative;
   transition: color 0.3s ease;
+  position: relative;
+  text-decoration: none;
 }
 
 .media-icons a::after {
@@ -128,16 +91,14 @@
   position: absolute;
   width: 0;
   height: 2px;
-  display: block;
-  margin-top: 5px;
-  right: 0;
-  background: #00FF00;
+  bottom: -4px;
+  left: 0;
+  background-color: #00FF00;
   transition: width 0.3s ease;
 }
 
 .media-icons a:hover::after {
   width: 100%;
-  left: 0;
 }
 
 .media-icons a:hover,
@@ -145,19 +106,44 @@
   color: #ffffff;
 }
 
-.fab,
-.fas {
-  font-size: 35px;
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-button {
+  background-color: transparent;
+  border: 2px solid #00FF00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Fira Code', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #1e1e1e;
+  transform: scale(1.05);
+  color: #ffffff;
+  border-color: #00FF00;
+}
+
+.contact-button a {
+  color: #00FF00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-button:hover a {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
   .contact-title {
     font-size: 2.2rem;
-  }
-
-  .contact-image {
-    width: 180px;
-    height: 180px;
   }
 
   .default-highlight {
@@ -168,8 +154,38 @@
     font-size: 1rem;
   }
 
+  .contact-image {
+    width: 160px;
+    height: 160px;
+  }
+
   .contact-button {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 8px 16px;
   }
+
+  .media-icon i {
+    font-size: 1.8rem;
+  }
+}
+.contact-info {
+ 
+  color: #cccccc;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #00FF00;
+}
+
+.contact-info a {
+  color: #9CDCFE;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
