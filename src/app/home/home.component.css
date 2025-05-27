@@ -1,39 +1,31 @@
-@media (max-width: 768px) {
-  .home-title, .home-author {
-    font-size: 2.5rem !important;
-  }
-
-  .home-author {
-    line-height: 3rem !important;
-  }
-}
-
-
-.text-left-container {
+.home-container {
+  padding: 30px 20px 40px; /* reduced top padding from 60px to 30px */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  background-color: #1e1e1e;
+  min-height: calc(100vh - 80px); /* still maintains full height minus navbar */
 }
 
-.text-left {
-  margin: 80px;
+.home-content {
+  max-width: 960px;
   text-align: start;
+  padding: 0 20px;
 }
 
 .home-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #569CD6;
-  margin-bottom: 4rem;
-  line-height: 4rem;
+  margin-bottom: 2rem;
+  line-height: 3.5rem;
   font-weight: 700;
 }
 
 .home-author {
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: #ffffff;
-  margin-bottom: 2.5rem;
-  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 3rem;
   font-weight: 500;
 }
 
@@ -51,18 +43,63 @@
 }
 
 @keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #FFD700;
-  }
+  from, to { border-color: transparent; }
+  50% { border-color: #FFD700; }
 }
 
 blockquote {
   color: #D4D4D4;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: italic;
   margin: 1.5rem 0;
 }
 
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.home-buttons button {
+  background-color: transparent;
+  border: 1px solid #9CDCFE;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.home-buttons button:hover {
+  background-color: #9CDCFE;
+}
+
+.home-buttons a {
+  text-decoration: none;
+  color: #9CDCFE;
+  font-weight: 500;
+}
+
+.home-buttons button:hover a {
+  color: #1e1e1e;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-author {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  blockquote {
+    font-size: 1rem;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+}

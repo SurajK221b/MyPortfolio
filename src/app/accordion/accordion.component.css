@@ -23,7 +23,8 @@ mat-expansion-panel-header {
 }
 
 mat-expansion-panel-header:hover {
-  background-color: #333333 !important; /* Slight hover effect */
+  background-color: #3a3d41 !important;
+  color: #ffffff !important;
 }
 
 .accordion-text {
@@ -74,6 +75,7 @@ mat-panel-title {
 .tech-cell i {
   /* color: #d4d4d4; */
   font-size: 3rem;
+  
 }
 
 ul {
@@ -93,4 +95,40 @@ li {
   .tech-cell {
     margin: 10px 0;
   }
+}
+mat-panel-title.exp {
+  white-space: normal !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+@media (max-width: 768px) {
+  mat-panel-title.exp {
+    font-size: 0.9rem !important;
+  }
+
+  mat-expansion-panel-header {
+    padding: 12px 15px;
+  }
+}
+@media (max-width: 768px) {
+  .tech-board {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .tech-cell {
+    margin: 10px;
+    font-size: 2rem;
+  }
+
+  .tech-cell i {
+    font-size: 2.5rem;
+  }
+}
+::ng-deep .mat-expansion-indicator::after {
+  border-color: #9CDCFE !important; /* Light blue arrow */
+}
+
+::ng-deep .mat-expansion-panel.mat-expanded .mat-expansion-indicator::after {
+  transform: rotate(180deg);
 }

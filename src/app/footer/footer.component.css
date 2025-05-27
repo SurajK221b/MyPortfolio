@@ -1,29 +1,25 @@
 @import '../../styles.css';
 
 .footer {
-  background-color: #1e1e1e;
+  background: linear-gradient(to right, #2c3e50, #1e1e1e); /* Match header gradient */
+  border-top: 2px solid #888d88;
   padding: 20px 0;
-  color: #d4d4d4;
+  color: #9CDCFE;
   font-family: 'Fira Code', 'Courier New', monospace;
-}
-
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1020;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   flex-wrap: wrap;
 }
 
 .footer p {
   margin: 0;
-  color: #9CDCFE;
   font-size: 0.9rem;
   flex: 1;
 }
@@ -66,4 +62,16 @@
 .fab,
 .fas {
   font-size: 24px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer p {
+    margin-bottom: 10px;
+  }
 }

@@ -1,21 +1,20 @@
-@import '../../styles.css';
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
 .navbar {
-  background-color: #1e1e1e;
+  background-color: #2d2d30; /* Changed: Dark Slate Gray for contrast */
   font-family: 'Fira Code', 'Courier New', monospace;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px 0;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1030;
+  position: sticky;
+  top: 0;
+  width: 100%;
+   background: linear-gradient(to right, #2c3e50, #1e1e1e); /* subtle gradient */
+    border-bottom: 2px solid #888d88;
 }
 
 .navbar-brand {
   font-weight: bold;
-  color: #DCDCAA;
+  color: #e2e24d;
+  font-size: 1.3rem;
 }
 
 .nav-link {
@@ -29,16 +28,32 @@
   color: #ffffff;
 }
 
-.shadow-sm {
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-}
-
 .bg-dark {
-  background-color: #1e1e1e !important;
+  background-color: transparent !important; /* handled by navbar gradient now */
 }
 
-.surname {
-  font-size: 20px;
-  font-weight: bold;
-  color: #DCDCAA;
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+}
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2899, 199, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 1rem;
+  text-align: center;
 }
