@@ -169,3 +169,36 @@ mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
   color: #4FC1FF; /* Slightly brighter blue when active */
 }
 
+::ng-deep mat-expansion-panel-header {
+  align-items: flex-start !important;
+  padding: 12px !important;
+  min-height: unset !important;
+  white-space: normal !important;
+  line-height: 1.5 !important;
+  display: flex !important; /* Revert back to flex */
+  flex-wrap: wrap; /* Allow text wrapping */
+}
+
+::ng-deep mat-panel-title {
+  white-space: normal !important;
+  line-height: 1.5 !important;
+  overflow: visible !important;
+  word-break: break-word !important;
+  flex: 1 1 100%; /* Make title take full width */
+  font-size: 0.95rem;
+}
+
+::ng-deep mat-expansion-indicator {
+  align-self: center; /* Keep arrow vertically aligned */
+  margin-left: auto; /* Push it to the right */
+}
+
+@media (max-width: 768px) {
+  ::ng-deep mat-expansion-panel-header {
+    padding: 14px 12px !important;
+  }
+
+  ::ng-deep mat-panel-title {
+    font-size: 0.9rem !important;
+  }
+}
