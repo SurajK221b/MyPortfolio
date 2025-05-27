@@ -115,6 +115,7 @@ blockquote {
     word-break: break-word; /* prevent overflow */
   }
 }
+
 .no-wrap {
   white-space: nowrap;
   overflow: hidden;
