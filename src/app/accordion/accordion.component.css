@@ -23,8 +23,7 @@ mat-expansion-panel-header {
 }
 
 mat-expansion-panel-header:hover {
-  background-color: #3a3d41 !important;
-  color: #ffffff !important;
+  background-color: #333333 !important; /* Slight hover effect */
 }
 
 .accordion-text {
@@ -43,6 +42,22 @@ mat-panel-title {
   color: #d4d4d4 !important;
   font-weight: 400;
 }
+.default-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Content layout */
+.content {
+  width: 100%;
+  max-width: 1100px;
+}
+
 
 .default-highlight {
   color: #FFD700; /* VSCode function name yellow */
@@ -75,7 +90,6 @@ mat-panel-title {
 .tech-cell i {
   /* color: #d4d4d4; */
   font-size: 3rem;
-  
 }
 
 ul {
@@ -96,10 +110,19 @@ li {
     margin: 10px 0;
   }
 }
+
+.tech-cell i {
+  transition: transform 0.2s ease;
+}
+
+.tech-cell:hover i {
+  transform: scale(1.2);
+}
+
 mat-panel-title.exp {
   white-space: normal !important;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word
 }
 @media (max-width: 768px) {
   mat-panel-title.exp {
@@ -125,10 +148,24 @@ mat-panel-title.exp {
     font-size: 2.5rem;
   }
 }
-::ng-deep .mat-expansion-indicator::after {
-  border-color: #9CDCFE !important; /* Light blue arrow */
+::ng-deep .mat-expansion-indicator {
+  display: none;
 }
 
-::ng-deep .mat-expansion-panel.mat-expanded .mat-expansion-indicator::after {
-  transform: rotate(180deg);
+/* VS Code Dark theme-compatible arrow icon */
+mat-expansion-panel-header::after {
+  content: '⌄'; /* Downward arrow */
+  color: #9CDCFE; /* VS Code light blue for icons/text */
+  font-size: 16px;
+  margin-left: auto;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  transform: rotate(0deg);
 }
+
+/* Rotate arrow when panel is expanded */
+mat-expansion-panel.mat-expanded mat-expansion-panel-header::after {
+  transform: rotate(180deg);
+  color: #4FC1FF; /* Slightly brighter blue when active */
+}
+

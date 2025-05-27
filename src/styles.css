@@ -113,9 +113,10 @@ button:hover {
 }
 
 .default-topic {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e2e24d;
+  margin-bottom: 1rem;
 }
 
 .default-subtopic {
