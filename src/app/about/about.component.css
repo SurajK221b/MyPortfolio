@@ -101,3 +101,8 @@ button a.a-green:hover {
 .home-buttons button:hover {
   background-color: #9CDCFE;
 }
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.3rem;
+  }
+}

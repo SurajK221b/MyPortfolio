@@ -219,3 +219,10 @@ mat-panel-title {
 }
 
 
+.default-exp-text{
+  color: #FFD700;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}

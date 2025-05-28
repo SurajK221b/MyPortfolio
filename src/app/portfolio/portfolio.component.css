@@ -4,3 +4,8 @@
   color: #e2e24d;
   margin-bottom: 1rem;
 }
+@media (max-width: 768px) {
+  .default-topic {
+    font-size: 1.3rem;
+  }
+}
