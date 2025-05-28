@@ -1,4 +1,4 @@
-name: Build and Deploy Angular to GitHub Pages
+name: Build Angular App on Main
 
 on:
   push:
@@ -6,29 +6,20 @@ on:
       - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: Clean dist folder
-        run: rm -rf dist
-
       - name: Build Angular App
-        run: npm run build -- --configuration production --base-href /MyPortfolio/
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: dist/angular-portfolio-app/browser
+        run: npm run build
